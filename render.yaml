@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: veronica-guerra-studio-bot
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    envVars:
+      - key: TELEGRAM_TOKEN
+        sync: false
+      - key: DATABASE_URL
+        sync: false
+      - key: WHATSAPP_NUMERO
+        sync: false
+      - key: ADMIN_IDS
+        sync: false
